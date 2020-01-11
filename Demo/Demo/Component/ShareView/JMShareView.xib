@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="35u-UL-XK1" customClass="JMShareView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvV-jL-Qoj">
+                    <rect key="frame" x="16" y="16" width="343" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="WXFriend" translatesAutoresizingMaskIntoConstraints="NO" id="RbF-rM-QFm">
+                    <rect key="frame" x="220" y="50" width="48" height="48"/>
+                </imageView>
+                <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WX" translatesAutoresizingMaskIntoConstraints="NO" id="X6t-hf-NzE">
+                    <rect key="frame" x="90" y="49" width="50" height="50"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqw-QT-ftR">
+                    <rect key="frame" x="100.5" y="107" width="29" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g61-qg-UtI">
+                    <rect key="frame" x="0.0" y="157" width="375" height="54"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="EJo-ck-V16"/>
+                    </constraints>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="selectCancleButton:" destination="35u-UL-XK1" eventType="touchUpInside" id="anu-U3-cFa"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="朋友圈" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM1-E1-PLF">
+                    <rect key="frame" x="222.5" y="107" width="43" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Xqw-QT-ftR" firstAttribute="centerX" secondItem="X6t-hf-NzE" secondAttribute="centerX" id="0ba-J0-iZE"/>
+                <constraint firstItem="g61-qg-UtI" firstAttribute="leading" secondItem="35u-UL-XK1" secondAttribute="leading" id="2Um-Qg-64K"/>
+                <constraint firstItem="g61-qg-UtI" firstAttribute="trailing" secondItem="35u-UL-XK1" secondAttribute="trailing" id="36h-Ob-9fy"/>
+                <constraint firstItem="RbF-rM-QFm" firstAttribute="centerX" secondItem="35u-UL-XK1" secondAttribute="centerX" multiplier="1.3" id="GCt-em-OgK"/>
+                <constraint firstItem="lM1-E1-PLF" firstAttribute="top" secondItem="RbF-rM-QFm" secondAttribute="bottom" constant="9" id="GOq-Ns-Pvd"/>
+                <constraint firstItem="lM1-E1-PLF" firstAttribute="centerX" secondItem="RbF-rM-QFm" secondAttribute="centerX" id="JFN-7E-QcS"/>
+                <constraint firstAttribute="trailing" secondItem="UvV-jL-Qoj" secondAttribute="trailing" constant="16" id="RS2-Wa-tsv"/>
+                <constraint firstItem="g61-qg-UtI" firstAttribute="top" secondItem="Xqw-QT-ftR" secondAttribute="bottom" constant="33" id="Ry3-4I-eLc"/>
+                <constraint firstItem="g61-qg-UtI" firstAttribute="top" secondItem="lM1-E1-PLF" secondAttribute="bottom" constant="33" id="VwR-Qb-AG8"/>
+                <constraint firstItem="RbF-rM-QFm" firstAttribute="top" secondItem="UvV-jL-Qoj" secondAttribute="bottom" constant="17" id="Xeb-st-9s1"/>
+                <constraint firstItem="UvV-jL-Qoj" firstAttribute="leading" secondItem="35u-UL-XK1" secondAttribute="leading" constant="16" id="Yrq-Tz-Xd6"/>
+                <constraint firstItem="Xqw-QT-ftR" firstAttribute="top" secondItem="X6t-hf-NzE" secondAttribute="bottom" constant="8" id="cuz-DW-pCY"/>
+                <constraint firstItem="RbF-rM-QFm" firstAttribute="centerY" secondItem="X6t-hf-NzE" secondAttribute="centerY" id="hAN-2j-kyG"/>
+                <constraint firstItem="RbF-rM-QFm" firstAttribute="leading" secondItem="X6t-hf-NzE" secondAttribute="trailing" constant="80" id="hbF-P7-5Mo"/>
+                <constraint firstItem="UvV-jL-Qoj" firstAttribute="top" secondItem="35u-UL-XK1" secondAttribute="top" constant="16" id="hgx-0t-zlD"/>
+                <constraint firstItem="g61-qg-UtI" firstAttribute="bottom" secondItem="35u-UL-XK1" secondAttribute="bottom" id="zXB-CO-OpR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imagePYQ" destination="RbF-rM-QFm" id="Jcg-O2-MX0"/>
+                <outlet property="imageWX" destination="X6t-hf-NzE" id="9LD-EJ-VS8"/>
+            </connections>
+            <point key="canvasLocation" x="250" y="-41"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="WX" width="50" height="50"/>
+        <image name="WXFriend" width="48" height="48"/>
+    </resources>
+</document>

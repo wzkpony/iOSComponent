@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GPItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visit" translatesAutoresizingMaskIntoConstraints="NO" id="EWf-yq-Vc6">
+                        <rect key="frame" x="31" y="5" width="68" height="68"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="EWf-yq-Vc6" secondAttribute="height" multiplier="1:1" id="TNW-d4-l0G"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdh-us-NJQ">
+                        <rect key="frame" x="0.0" y="89" width="130" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="EWf-yq-Vc6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="8HX-ik-e0N"/>
+                <constraint firstAttribute="bottom" secondItem="sdh-us-NJQ" secondAttribute="bottom" constant="5" id="ACq-BR-R3T"/>
+                <constraint firstItem="sdh-us-NJQ" firstAttribute="top" secondItem="EWf-yq-Vc6" secondAttribute="bottom" constant="16" id="dDm-bV-Yad"/>
+                <constraint firstAttribute="trailing" secondItem="sdh-us-NJQ" secondAttribute="trailing" id="f1x-R1-gOW"/>
+                <constraint firstItem="EWf-yq-Vc6" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="pBM-AC-lBX"/>
+                <constraint firstItem="sdh-us-NJQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tj0-KL-FeH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="nameLabel" destination="sdh-us-NJQ" id="UUz-Ho-4r9"/>
+                <outlet property="titleImageView" destination="EWf-yq-Vc6" id="wmo-ZM-NFg"/>
+            </connections>
+            <point key="canvasLocation" x="-59.420289855072468" y="135.9375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="visit" width="68" height="68"/>
+    </resources>
+</document>

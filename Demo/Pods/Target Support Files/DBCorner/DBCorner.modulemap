@@ -1,0 +1,6 @@
+framework module DBCorner {
+  umbrella header "DBCorner-umbrella.h"
+
+  export *
+  module * { export * }
+}

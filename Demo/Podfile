@@ -94,4 +94,6 @@ pod 'Charts'    #图表
 pod 'GTSDK'
 
 pod 'BMKLocationKit'#百度定位SDK
+
+pod 'SGQRCode', '~> 3.0.1'#二维码生成和扫描
 end

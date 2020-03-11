@@ -10,7 +10,7 @@
 //#import "WebKit/WebKit.h"
 #import "AFNetworking.h"
 @interface APPWebVC ()<UIWebViewDelegate,WKNavigationDelegate,UIScrollViewDelegate>
-@property (weak,nonatomic) UIProgressView *progressView;
+@property (strong,nonatomic) UIProgressView *progressView;
 
 @end
 
@@ -56,8 +56,9 @@
         make.height.equalTo(@3.0);
     }];
     
-    // 通过KVO  将网络加载的速度传递给进度条 estimatedProgress
-    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    if (@available(iOS 13.0, *)) {}else{
+        [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    }
     
     [self.webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:NULL];
     
@@ -72,11 +73,8 @@
     NSURL *url = [NSURL URLWithString:self.urlStr];
     if (self.urlType == PathLocation) {
         url = [NSURL fileURLWithPath:self.urlStr];
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:20];
-        //    BOOL ifFile = [[NSFileManager defaultManager] fileExistsAtPath:self.urlStr];
-        //    NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
-        [webview loadRequest:request];
+        [webview loadFileURL:url allowingReadAccessToURL:url];
     }
     else if (self.urlType == htmlString){
 //        loadHTMLString
@@ -178,7 +176,9 @@
 
     self.webView.navigationDelegate = nil;
     //一定要关闭KVO
-    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    if (@available(iOS 13.0, *)) {}else{
+        [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    }
     [self.webView removeObserver:self forKeyPath:@"title"];
 }
 

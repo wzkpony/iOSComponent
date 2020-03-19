@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GPSearchView">
+            <connections>
+                <outlet property="searchButton" destination="XPX-Nm-5es" id="m5k-1d-Wss"/>
+                <outlet property="searchText" destination="sBx-T1-BDV" id="2Cw-3Z-C9x"/>
+                <outlet property="searchTextFieldLeft" destination="N08-ex-hZo" id="a9c-mx-vNx"/>
+                <outlet property="searchView" destination="Ncp-rf-G5O" id="p5F-ak-gco"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ncp-rf-G5O">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-T1-BDV">
+                    <rect key="frame" x="0.0" y="0.0" width="370" height="44"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                </textField>
+                <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPX-Nm-5es">
+                    <rect key="frame" x="370" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="XPX-Nm-5es" secondAttribute="height" multiplier="1:1" id="vA2-M1-iPd"/>
+                    </constraints>
+                    <state key="normal" image="search"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sBx-T1-BDV" secondAttribute="bottom" id="2KI-gJ-IpB"/>
+                <constraint firstAttribute="bottom" secondItem="XPX-Nm-5es" secondAttribute="bottom" id="4Ko-Fv-Bbk"/>
+                <constraint firstItem="XPX-Nm-5es" firstAttribute="leading" secondItem="sBx-T1-BDV" secondAttribute="trailing" id="IQx-lm-M31"/>
+                <constraint firstItem="XPX-Nm-5es" firstAttribute="top" secondItem="Ncp-rf-G5O" secondAttribute="top" id="Jsz-PC-RZS"/>
+                <constraint firstItem="sBx-T1-BDV" firstAttribute="leading" secondItem="Ncp-rf-G5O" secondAttribute="leading" id="N08-ex-hZo"/>
+                <constraint firstAttribute="trailing" secondItem="XPX-Nm-5es" secondAttribute="trailing" id="sta-dE-f04"/>
+                <constraint firstItem="sBx-T1-BDV" firstAttribute="top" secondItem="Ncp-rf-G5O" secondAttribute="top" id="yLP-xx-suO"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="60" height="60"/>
+    </resources>
+</document>

@@ -119,36 +119,41 @@
     
 }
 
-+(NSString *)dateFromTimeFormatStr:(NSString *)formatStr withTimeString:(NSString *)timeString{
-    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    NSString * times = [self timeIntervalFromTimeStr:timeString withFormater:@"HH:mm"];
-    NSTimeInterval second = times.longLongValue / 1000.0; //毫秒需要除
-    
-    // 时间戳 -> NSDate *
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:second];
-    fmt.dateFormat = formatStr?formatStr:@"HH:mm";
-    NSString *stringNew = [fmt stringFromDate:date];
-    
-    return stringNew;
-}
 
-// UTC时间转成本地时间
+// 将年月日时分秒时间格式转化成任意格式
 - (NSString *)timeFromUTCTimeToFormatter:(NSString *)formatterString {
     
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     format.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    format.timeZone = [NSTimeZone localTimeZone];
 
     if ([self containsString:@"T"]) {
-        format.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
+        format.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'Z'";
         format.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
     }
     NSDate *utcDate = [format dateFromString:self];
-    format.timeZone = [NSTimeZone localTimeZone];
     [format setDateFormat:formatterString];//
     NSString *dateString = [format stringFromDate:utcDate];
     return dateString;
     
 }
+// 将一种时间格式转化成另一种格式
+- (NSString *)timeFromUTCTimeFromFromatter:(NSString *)fromMatterString ToFormatter:(NSString *)formatterString {
+    
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    format.dateFormat = fromMatterString;
+    format.timeZone = [NSTimeZone localTimeZone];
+    
+    if ([self containsString:@"T"]) {
+        format.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+    }
+    NSDate *utcDate = [format dateFromString:self];
+    [format setDateFormat:formatterString];//
+    NSString *dateString = [format stringFromDate:utcDate];
+    return dateString;
+    
+}
+
 //将本地日期字符串转为UTC日期字符串
 //本地日期格式:北京时间UTC格式
 //可自行指定输入输出格式
@@ -166,7 +171,7 @@
     NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
     [dateFormatter setTimeZone:timeZone];
     //输出格式
-    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
     NSString *dateString = [dateFormatter stringFromDate:dateFormatted];
     return dateString;
 }
@@ -201,5 +206,27 @@
     [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     NSString * dateStr = [formatter stringFromDate:date];
     return dateStr;
+}
+//日期对比
+- (int)compareOneDay:(NSDate *)currentDay withAnotherDay:(NSDate *)BaseDay
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy-HHmmss"];
+    NSString *currentDayStr = [dateFormatter stringFromDate:currentDay];
+    NSString *BaseDayStr = [dateFormatter stringFromDate:BaseDay];
+    NSDate *dateA = [dateFormatter dateFromString:currentDayStr];
+    NSDate *dateB = [dateFormatter dateFromString:BaseDayStr];
+    NSComparisonResult result = [dateA compare:dateB];
+    NSLog(@"date1 : %@, date2 : %@", currentDay, BaseDay);
+    if (result == NSOrderedDescending) {
+        //NSLog(@"Date1  is in the future");
+        return 1;
+    }
+    else if (result == NSOrderedAscending){
+        //NSLog(@"Date1 is in the past");
+        return -1;
+    }
+    //NSLog(@"Both dates are the same");
+    return 0;
 }
 @end

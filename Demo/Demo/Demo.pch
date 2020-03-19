@@ -55,6 +55,14 @@
 #import <UMShare/UMShare.h>
 #import <AlipaySDK/AlipaySDK.h>
 
+//关于日志的配置
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#ifdef DEBUG
+static const int ddLogLevel = DDLogLevelVerbose;
+#else
+static const int ddLogLevel = DDLogLevelWarning;
+#endif
+
 //pod自定义组件
 #import "lame.h"
 //项目头文件

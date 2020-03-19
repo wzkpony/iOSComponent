@@ -39,5 +39,28 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    <key>NSCameraUsageDescription</key>
+    <string>App需要您的同意,访问相机来拍照上传照片</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>App需要您的同意,访问位置来进行打卡</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>App需要您的同意,访问位置来进行打卡</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>App需要您的同意,访问麦克风</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>App需要您的同意,访问相册来保存图片</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>App需要您的同意,访问相册来上传图片</string>
+    <key>UIFileSharingEnabled</key>
+    <true/>
+    <key>LSSupportsOpeningDocumentsInPlace</key>
+    <true/>
+    
 </dict>
 </plist>

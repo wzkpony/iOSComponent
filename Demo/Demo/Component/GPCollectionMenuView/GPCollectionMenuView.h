@@ -14,8 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UIView *contentsView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-
+/**
+ NSDictionary 格式：@{@"name":@"xxxx",@"imageUrl":@"xxxx"}
+ */
 @property (nonatomic ,strong) NSArray<NSDictionary *> *dataSource;
+
+@property (nonatomic ,strong) UIColor *itemBackgroundColor;
+@property (nonatomic ,strong) UIColor *itemTextLabelColor;
+@property (nonatomic ,copy)void (^selectItemForCollectionView)(NSIndexPath *indexPath);
 @end
 
 NS_ASSUME_NONNULL_END

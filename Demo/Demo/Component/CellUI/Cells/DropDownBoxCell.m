@@ -1,14 +1,14 @@
 //
-//  NormalCell.m
-//  Demo
+//  DropDownBoxCell.m
+//  Crmservice
 //
-//  Created by wzk on 2020/1/11.
+//  Created by wzk on 2020/1/13.
 //  Copyright © 2020 wzk. All rights reserved.
 //
 
-#import "NormalCell.h"
+#import "DropDownBoxCell.h"
 
-@implementation NormalCell
+@implementation DropDownBoxCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -20,12 +20,14 @@
 +(NSString *)formateDateOnlyShifen:(NSString *)string;//时间戳转换为时间
 
 +(NSDate *)dateFromTimeStr:(NSString *)timeStr;//年月日转换为date;
-+(NSString *)dateFromTimeFormatStr:(NSString *)formatStr withTimeString:(NSString *)timeString;//年月日时分秒时间转换为任意格式时间;
 
 +(NSString *)ret32bitString;//随机的32位字符串
 
-// UTC时间转成本地时间
+// 将年月日时分秒时间转化成任意格式
 -(NSString *)timeFromUTCTimeToFormatter:(NSString *)formatterString;
 
 + (NSString *)getUTCFormateLocalDate;
+
+// 将一种时间格式转化成另一种格式
+- (NSString *)timeFromUTCTimeFromFromatter:(NSString *)fromMatterString ToFormatter:(NSString *)formatterString;
 @end

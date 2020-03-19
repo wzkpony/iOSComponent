@@ -9,7 +9,7 @@
 #import "UICollectionView+Layout.h"
 
 @implementation UICollectionView (Layout)
-- (void)configLayoutCollectionWithItemWidth:(CGFloat)itemWidth withHeight:(CGFloat)itemHeight minimumInteritemSpacing:(CGFloat)minimumInteritemSpacing minimumLineSpacing:(CGFloat)minimumLineSpacing {
+- (void)configLayoutCollectionWithItemWidth:(CGFloat)itemWidth withHeight:(CGFloat)itemHeight minimumInteritemSpacing:(CGFloat)minimumInteritemSpacing minimumLineSpacing:(CGFloat)minimumLineSpacing sectionInset:(UIEdgeInsets)sectionInset {
     /**
      创建layout(布局)
      UICollectionViewFlowLayout 继承与UICollectionLayout
@@ -31,7 +31,7 @@
     layout.minimumLineSpacing = minimumLineSpacing;
     
     //每个分区的四边间距UIEdgeInsetsMake
-    //    layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    layout.sectionInset = sectionInset;
     //
     // 设置Item的估计大小,用于动态设置item的大小，结合自动布局（self-sizing-cell）
     //layout.estimatedItemSize = CGSizeMake(<#CGFloat width#>, <#CGFloat height#>);

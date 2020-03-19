@@ -34,6 +34,7 @@ pod 'TTGTagCollectionView'#
 #pod 'PYSearch'
 #pod 'AMapLocation'#高德定位SDK
 pod 'iCarousel','1.8.3'#旋转木马
+pod 'CocoaLumberjack','~>3.5.1'#日志系统
 
 
 #pod 'YYCache' # 高性能的 iOS 缓存框架。

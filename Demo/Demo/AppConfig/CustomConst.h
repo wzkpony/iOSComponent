@@ -47,6 +47,9 @@
 
 //app版本号
 #define App_SYSTEM_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+//build号
+#define App_SYSTEM_Build [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+
 //app名字
 #define App_InfoDict [NSBundle mainBundle].localizedInfoDictionary ?: [NSBundle mainBundle].infoDictionary
 #define App_APPName [kInfoDict valueForKey:@"CFBundleDisplayName"] ?: [kInfoDict valueForKey:@"CFBundleName"]

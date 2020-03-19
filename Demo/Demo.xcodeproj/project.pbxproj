@@ -183,6 +183,8 @@
 		1DA7E2DD24232ADA00EF2395 /* GPCollectionMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7E2D724232ADA00EF2395 /* GPCollectionMenuView.m */; };
 		1DA7E2DE24232ADA00EF2395 /* GPItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7E2D824232ADA00EF2395 /* GPItemCell.xib */; };
 		1DA7E2DF24232ADA00EF2395 /* GPCollectionMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7E2DA24232ADA00EF2395 /* GPCollectionMenuView.xib */; };
+		1DA7E2E424232E8800EF2395 /* GPCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7E2E124232E8800EF2395 /* GPCalendarView.m */; };
+		1DA7E2E524232E8800EF2395 /* GPCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7E2E324232E8800EF2395 /* GPCalendarView.xib */; };
 		1DDFBAD823C461BD0096C55D /* JMLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDFBAD323C461BD0096C55D /* JMLocationManager.m */; };
 		1DDFBAD923C461BD0096C55D /* GPLocationBaidu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDFBAD723C461BD0096C55D /* GPLocationBaidu.m */; };
 		1DDFBADB23C469C10096C55D /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDFBADA23C469C10096C55D /* libmp3lame.a */; };
@@ -485,6 +487,9 @@
 		1DA7E2D924232ADA00EF2395 /* GPItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPItemCell.h; sourceTree = "<group>"; };
 		1DA7E2DA24232ADA00EF2395 /* GPCollectionMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPCollectionMenuView.xib; sourceTree = "<group>"; };
 		1DA7E2DB24232ADA00EF2395 /* GPCollectionMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCollectionMenuView.h; sourceTree = "<group>"; };
+		1DA7E2E124232E8800EF2395 /* GPCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCalendarView.m; sourceTree = "<group>"; };
+		1DA7E2E224232E8800EF2395 /* GPCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCalendarView.h; sourceTree = "<group>"; };
+		1DA7E2E324232E8800EF2395 /* GPCalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPCalendarView.xib; sourceTree = "<group>"; };
 		1DDFBAC923C451C70096C55D /* Demo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo.pch; sourceTree = "<group>"; };
 		1DDFBACB23C4615F0096C55D /* SizeConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeConst.h; sourceTree = "<group>"; };
 		1DDFBACC23C4615F0096C55D /* AppKeyConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppKeyConst.h; sourceTree = "<group>"; };
@@ -555,7 +560,6 @@
 			children = (
 				1DDFBACA23C4615F0096C55D /* AppConfig */,
 				1D576F3923AE104B00518001 /* ModulesComponent */,
-				1D576DFF23AE0C4D00518001 /* ModulesTools */,
 				1D576D6523AE0C3300518001 /* Component */,
 				1D576D4F23AE0AB300518001 /* AppDelegate.h */,
 				1D576D5023AE0AB300518001 /* AppDelegate.m */,
@@ -578,6 +582,17 @@
 		1D576D6523AE0C3300518001 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				1DA7E2E024232E5500EF2395 /* CalendarView */,
+				1D576E0323AE0C4D00518001 /* BaseUI */,
+				1D576E1023AE0C4D00518001 /* Categories */,
+				1D576E0023AE0C4D00518001 /* AppRequest */,
+				1D576E5A23AE0C9800518001 /* WXPay */,
+				1D576EA523AE0CF600518001 /* WLScrollView */,
+				1D576EAC23AE0D0E00518001 /* CodeTextView */,
+				1D576EB923AE0D5300518001 /* IMSScanner */,
+				1D576F2423AE0F2F00518001 /* SHA */,
+				1D576F2723AE0F2F00518001 /* RSA */,
+				1D02F92A2420994E00EFD243 /* Logs */,
 				1DA7E2D524232ADA00EF2395 /* GPCollectionMenuView */,
 				1DA7E2CB242327BA00EF2395 /* FileAPP */,
 				1DA7E2C5242327AE00EF2395 /* SelectViews */,
@@ -785,23 +800,6 @@
 				1D576DCD23AE0C3300518001 /* MBProgressHUD+LL.h */,
 			);
 			path = "MBProgressHUD+LL";
-			sourceTree = "<group>";
-		};
-		1D576DFF23AE0C4D00518001 /* ModulesTools */ = {
-			isa = PBXGroup;
-			children = (
-				1D02F92A2420994E00EFD243 /* Logs */,
-				1D576F2723AE0F2F00518001 /* RSA */,
-				1D576F2423AE0F2F00518001 /* SHA */,
-				1D576EB923AE0D5300518001 /* IMSScanner */,
-				1D576EAC23AE0D0E00518001 /* CodeTextView */,
-				1D576EA523AE0CF600518001 /* WLScrollView */,
-				1D576E5A23AE0C9800518001 /* WXPay */,
-				1D576E0023AE0C4D00518001 /* AppRequest */,
-				1D576E0323AE0C4D00518001 /* BaseUI */,
-				1D576E1023AE0C4D00518001 /* Categories */,
-			);
-			path = ModulesTools;
 			sourceTree = "<group>";
 		};
 		1D576E0023AE0C4D00518001 /* AppRequest */ = {
@@ -1286,6 +1284,16 @@
 			path = GPCollectionMenuView;
 			sourceTree = "<group>";
 		};
+		1DA7E2E024232E5500EF2395 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				1DA7E2E224232E8800EF2395 /* GPCalendarView.h */,
+				1DA7E2E124232E8800EF2395 /* GPCalendarView.m */,
+				1DA7E2E324232E8800EF2395 /* GPCalendarView.xib */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
 		1DA9766D23C8E40F00588FE1 /* CellUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -1456,6 +1464,7 @@
 				1D576E8B23AE0CAE00518001 /* gif2.gif in Resources */,
 				1D576DEB23AE0C3300518001 /* citydict.plist in Resources */,
 				1D576E9A23AE0CAE00518001 /* emoji@3x.png in Resources */,
+				1DA7E2E524232E8800EF2395 /* GPCalendarView.xib in Resources */,
 				1DA7E2A02423276600EF2395 /* btn_addSend@3x.png in Resources */,
 				1D576DEA23AE0C3300518001 /* cancel@3x.png in Resources */,
 				1D576E9B23AE0CAE00518001 /* wechatvoice3_1@3x.png in Resources */,
@@ -1636,6 +1645,7 @@
 				1D576E5F23AE0C9800518001 /* PayReqModel.m in Sources */,
 				1D576EDE23AE0D9300518001 /* APPWebVC.m in Sources */,
 				1D576E5023AE0C4D00518001 /* CALayer+JM.m in Sources */,
+				1DA7E2E424232E8800EF2395 /* GPCalendarView.m in Sources */,
 				1DA7E2D12423293800EF2395 /* NSString+NCDate.m in Sources */,
 				1DA7E2CE242327BA00EF2395 /* COSDocPickerViewController.m in Sources */,
 				1D576F5323AE163500518001 /* AppDelegate+PushService.m in Sources */,

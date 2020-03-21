@@ -202,7 +202,7 @@
 		1D02F9322420994E00EFD243 /* MagicLogsDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicLogsDetailsVC.m; sourceTree = "<group>"; };
 		1D02F9332420994E00EFD243 /* MagicLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicLogFormatter.h; sourceTree = "<group>"; };
 		1D02F9342420994E00EFD243 /* MagicLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicLogManager.m; sourceTree = "<group>"; };
-		1D576D4C23AE0AB300518001 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D576D4C23AE0AB300518001 /* iOSComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D576D4F23AE0AB300518001 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D576D5023AE0AB300518001 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D576D5223AE0AB300518001 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -490,7 +490,7 @@
 		1DA7E2E124232E8800EF2395 /* GPCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCalendarView.m; sourceTree = "<group>"; };
 		1DA7E2E224232E8800EF2395 /* GPCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCalendarView.h; sourceTree = "<group>"; };
 		1DA7E2E324232E8800EF2395 /* GPCalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPCalendarView.xib; sourceTree = "<group>"; };
-		1DDFBAC923C451C70096C55D /* Demo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo.pch; sourceTree = "<group>"; };
+		1DDFBAC923C451C70096C55D /* iOSComponent.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSComponent.pch; sourceTree = "<group>"; };
 		1DDFBACB23C4615F0096C55D /* SizeConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeConst.h; sourceTree = "<group>"; };
 		1DDFBACC23C4615F0096C55D /* AppKeyConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppKeyConst.h; sourceTree = "<group>"; };
 		1DDFBACD23C4615F0096C55D /* FontConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontConfig.h; sourceTree = "<group>"; };
@@ -540,7 +540,7 @@
 		1D576D4323AE0AB300518001 = {
 			isa = PBXGroup;
 			children = (
-				1D576D4E23AE0AB300518001 /* Demo */,
+				1D576D4E23AE0AB300518001 /* iOSComponent */,
 				1D576D4D23AE0AB300518001 /* Products */,
 				7D6032B564EFA4BDDE443D4E /* Pods */,
 				3BEECFC1BEBCE350692F9DD1 /* Frameworks */,
@@ -550,12 +550,12 @@
 		1D576D4D23AE0AB300518001 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D576D4C23AE0AB300518001 /* Demo.app */,
+				1D576D4C23AE0AB300518001 /* iOSComponent.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1D576D4E23AE0AB300518001 /* Demo */ = {
+		1D576D4E23AE0AB300518001 /* iOSComponent */ = {
 			isa = PBXGroup;
 			children = (
 				1DDFBACA23C4615F0096C55D /* AppConfig */,
@@ -574,9 +574,9 @@
 				1D576D5A23AE0AB400518001 /* LaunchScreen.storyboard */,
 				1D576D5D23AE0AB400518001 /* Info.plist */,
 				1D576D5E23AE0AB400518001 /* main.m */,
-				1DDFBAC923C451C70096C55D /* Demo.pch */,
+				1DDFBAC923C451C70096C55D /* iOSComponent.pch */,
 			);
-			path = Demo;
+			path = iOSComponent;
 			sourceTree = "<group>";
 		};
 		1D576D6523AE0C3300518001 /* Component */ = {
@@ -1362,9 +1362,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D576D4B23AE0AB300518001 /* Demo */ = {
+		1D576D4B23AE0AB300518001 /* iOSComponent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D576D6223AE0AB400518001 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = 1D576D6223AE0AB400518001 /* Build configuration list for PBXNativeTarget "iOSComponent" */;
 			buildPhases = (
 				0FCDAA273BC03244725311D4 /* [CP] Check Pods Manifest.lock */,
 				1D576D4823AE0AB300518001 /* Sources */,
@@ -1377,9 +1377,9 @@
 			);
 			dependencies = (
 			);
-			name = Demo;
+			name = iOSComponent;
 			productName = Demo;
-			productReference = 1D576D4C23AE0AB300518001 /* Demo.app */;
+			productReference = 1D576D4C23AE0AB300518001 /* iOSComponent.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1396,7 +1396,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1D576D4723AE0AB300518001 /* Build configuration list for PBXProject "Demo" */;
+			buildConfigurationList = 1D576D4723AE0AB300518001 /* Build configuration list for PBXProject "iOSComponent" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1409,7 +1409,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D576D4B23AE0AB300518001 /* Demo */,
+				1D576D4B23AE0AB300518001 /* iOSComponent */,
 			);
 		};
 /* End PBXProject section */
@@ -1815,16 +1815,16 @@
 				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Demo/Demo.pch";
-				INFOPLIST_FILE = Demo/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSComponent/iOSComponent.pch";
+				INFOPLIST_FILE = iOSComponent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Demo/ModulesTools/ChatVC/lame",
-					"$(PROJECT_DIR)/Demo/Component/ChatVC/lame",
+					"$(PROJECT_DIR)/iOSComponent/ModulesTools/ChatVC/lame",
+					"$(PROJECT_DIR)/iOSComponent/Component/ChatVC/lame",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GeneEgg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1844,16 +1844,16 @@
 				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Demo/Demo.pch";
-				INFOPLIST_FILE = Demo/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSComponent/iOSComponent.pch";
+				INFOPLIST_FILE = iOSComponent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Demo/ModulesTools/ChatVC/lame",
-					"$(PROJECT_DIR)/Demo/Component/ChatVC/lame",
+					"$(PROJECT_DIR)/iOSComponent/ModulesTools/ChatVC/lame",
+					"$(PROJECT_DIR)/iOSComponent/Component/ChatVC/lame",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GeneEgg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1865,7 +1865,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D576D4723AE0AB300518001 /* Build configuration list for PBXProject "Demo" */ = {
+		1D576D4723AE0AB300518001 /* Build configuration list for PBXProject "iOSComponent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D576D6023AE0AB400518001 /* Debug */,
@@ -1874,7 +1874,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D576D6223AE0AB400518001 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		1D576D6223AE0AB400518001 /* Build configuration list for PBXNativeTarget "iOSComponent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D576D6323AE0AB400518001 /* Debug */,
